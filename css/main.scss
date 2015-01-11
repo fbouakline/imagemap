@@ -1,0 +1,100 @@
+@import "compass/reset";
+@import "compass/css3/transform";
+
+$main_color: #2b180e;
+$main_font: Kozuka Mincho Pro;
+$image_width: 999px;
+$image_height: 601px;
+$image_border: 2px;
+$wrap_width: $image_width + ($image_border * 2);
+$wrap_height: $image_height +($image_border * 2);
+
+body{
+	background-color: #e2c78f;
+}
+
+.wrap{
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: $wrap_width;
+	height: $wrap_height;
+	margin: (-($image_height / 2)) 0 0 (-($image_width / 2));
+	overflow: hidden;
+	img:first-child{
+		border: $image_border solid #4f4438;
+	}
+	.autoplay{
+		position: absolute;
+		left:0;
+		top:0;
+		padding: 10px;
+		input[type="checkbox"] + label{
+			color: $main_color;
+			font-family: $main_font;
+		}
+	}
+	div:last-child{
+	top:$image_height - 200 ;
+	left:$image_width - 120;
+	position: absolute;
+	background-image: url('../img/bubble.png');
+	width:100px;
+	height:100px;
+		h1{
+			margin: 30px 0 50px 19px;
+			font-family: $main_font;
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+	}
+
+}
+
+.char{
+	position: absolute;
+	top: 40px;
+	left: 220px + $wrap_width;
+}
+
+.name{
+	color: $main_color;
+	font-size: 50px;
+	font-family: $main_font;
+	position: absolute;
+	width: 561px;
+	left: 520px;
+	top: 165px;
+	//pushes characters together
+	@include scale((0.6),1);
+	span{
+		width: 1px;
+		overflow: hidden;
+		white-space: nowrap;
+		display: block;
+		&:nth-child(2){
+			font-size: 30px;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+	}
+}
+
+img[src="img/chopper.png"]{
+	z-index: 2;
+	width: 200px;
+	height: 224px;
+	position:fixed;
+	left:1%;
+	top: 100%;
+	margin-top: -223px;
+}
+
+img[src="img/strawhat.png"]{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -415px 0 0 170px;
+	z-index: 2;
+}

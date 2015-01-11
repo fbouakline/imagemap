@@ -1,0 +1,147 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background-color: #e2c78f;
+}
+
+.wrap {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1003px;
+  height: 605px;
+  margin: -300.5px 0 0 -499.5px;
+  overflow: hidden;
+}
+.wrap img:first-child {
+  border: 2px solid #4f4438;
+}
+.wrap .autoplay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+}
+.wrap .autoplay input[type="checkbox"] + label {
+  color: #2b180e;
+  font-family: Kozuka Mincho Pro;
+}
+.wrap div:last-child {
+  top: 401px;
+  left: 879px;
+  position: absolute;
+  background-image: url("../img/bubble.png");
+  width: 100px;
+  height: 100px;
+}
+.wrap div:last-child h1 {
+  margin: 30px 0 50px 19px;
+  font-family: Kozuka Mincho Pro;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.char {
+  position: absolute;
+  top: 40px;
+  left: 1223px;
+}
+
+.name {
+  color: #2b180e;
+  font-size: 50px;
+  font-family: Kozuka Mincho Pro;
+  position: absolute;
+  width: 561px;
+  left: 520px;
+  top: 165px;
+  -moz-transform: scale(0.6, 1);
+  -ms-transform: scale(0.6, 1);
+  -o-transform: scale(0.6, 1);
+  -webkit-transform: scale(0.6, 1);
+  transform: scale(0.6, 1);
+}
+.name span {
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+.name span:nth-child(2) {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+img[src="img/chopper.png"] {
+  z-index: 2;
+  width: 200px;
+  height: 224px;
+  position: fixed;
+  left: 1%;
+  top: 100%;
+  margin-top: -223px;
+}
+
+img[src="img/strawhat.png"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -415px 0 0 170px;
+  z-index: 2;
+}

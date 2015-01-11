@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Fouad Bouakline">
+	<meta name="keywords" content="One,Piece,Film,Z">
+	<title>One Piece | Film Z</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.png" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+	<script src="js/min/jquery-2.0.2.min.js"></script>
+	<script src="magnific-popup/min/jquery.magnific-popup.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<img src="img/OP.jpg" alt="" usemap="#onepiece" id="onepiece">
+		<map name="onepiece">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="1">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="2">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="3">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="4">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="5">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="6">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="7">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="8">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="9">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="10">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="11">
+			<area shape="rect" href="#" alt="" class="onepiece_area" id="12">
+			<area shape="rect" coords="334,527,486,567" href="#" alt="" class="button" id="back">
+			<area shape="rect	" coords="500,527,650,567" href="#" alt="" class="button" id="next">
+			<area shape="poly" coords="930,504,926,516,890,522,899,527,899,536,898,539,903,539,903,542,910,544,906,547,903,550,895,547,898,554,899,557,903,551,905,559,901,567,905,571,909,571,913,580,919,583,930,585,939,585,947,582,951,574,956,566,956,557,953,553,961,544,963,530,961,523,939,515,933,516,933,514,929,507" href="video/Filmz_trailer.mp4" alt="" id="video">
+		</map>
+		<img src="img/char/luffy.png" alt="" id="char" class="char">
+		<div class="name">
+			<span id="japanese_name" class="names"></span>
+			<span id="english_name" class="names"></span>
+		</div>
+		<!--end name-->
+		<div class="autoplay" id="autoplay">
+			<input type="checkbox" id="auto">
+			<label for="auto">Autoplay</label>
+		</div>
+		<!--end autoplay-->
+		<div id="bubble"><h1>Video</h1></div>
+	</div>
+	<!--end wrap-->
+	<img src="img/strawhat.png" alt="" id="strawhat">
+	<img src="img/chopper.png" alt="" id="chopper">
+	<script>
+		var area_coordinates = [20,91,93,144];
+		function coordinates(times){
+			for(var i = 1;i<= times; i++){
+				var x  = document.getElementsByTagName("area")[i-1];
+				var coords = area_coordinates[0]  + "," + area_coordinates[1] + "," + area_coordinates[2]  + "," + area_coordinates[3] ;
+				x.setAttribute("coords",coords);
+				if(i % 2 == 0){
+					area_coordinates[1] += 61;
+					area_coordinates[3] += 61;
+					area_coordinates[0] = 20;
+					area_coordinates[2] = 93;
+				}
+				else{
+					area_coordinates[0] += 80;
+					area_coordinates[2]	+= 80;
+				}
+			}
+		}
+		coordinates(12);
+	</script>
+	<script src="js/min/image_map.min.js" type="text/javascript"></script>
+	<script src="js/min/characters.min.js"></script>
+	<script src="js/min/video.min.js"></script>
+</body>
+</html>
